@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<odoo>
+    <template
+            id="webclient_bootstrap"
+            name="web_company_color assets"
+            inherit_id="web.webclient_bootstrap"
+    >
+        <xpath expr="//t[@t-set='head_web']">
+            <t t-call-assets="web_company_color.company_color_assets"/>
+        </xpath>
+    </template>
+
+    <template id="assets_backend" name="Home Background Image: Assets" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/pg_change_color_by_company/static/src/js/home.js"></script>
+        </xpath>
+    </template>
+
+</odoo>
